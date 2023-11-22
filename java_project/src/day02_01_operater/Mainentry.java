@@ -4,7 +4,7 @@ public class Mainentry {
 	// 최단산쉬관논삼대콤
 //	public static void main(String[] args) {
 //		//단항연산자 : 증감 ==> ++, --, ~, ....
-	
+//	
 //		int x = 10, y;
 //		int a = 10, b;
 //		
@@ -17,16 +17,16 @@ public class Mainentry {
 	
 //	public static void main(String[] args) {
 //		//비트연산자
-	
+//	
 //		int x = 10;
 //		int y = ~x; //비트부정 -(원래값+1) => 결과 
-	
+//	
 //		System.out.println("X = " + x + ", Y = " + y);	
 //	}
 	
 //	public static void main(String[] args) {
 //		//산술연산자: +, -, *, /, %
-	
+//	
 //		int x = 10, y = 3;
 //		double a = 10, b = 3; 
 //		
@@ -45,7 +45,7 @@ public class Mainentry {
 //		//Shift 연산지: <<, >>
 //		
 //		int x = 8, result;
-	
+//	
 //		result = x << 2; //left shift  원래값 * 2^n
 //		System.out.println(result); 
 //		
@@ -58,7 +58,7 @@ public class Mainentry {
 //		
 //		int x = 3, y = 5;
 //		boolean flag = true;
-	
+//	
 //		System.out.println(!flag); // !는 부정연산자
 //		
 //		if(x > y) {
@@ -70,8 +70,9 @@ public class Mainentry {
 //	}
 	
 //	public static void main(String[] args) {
-//		//논리연산자: &, |, ^     2진 논리 => 결과를 값으로 돌려준다.
-	
+//		//논리연산자: &, |, ^     
+//		//2진 논리 => 결과를 값으로 돌려준다.
+//	
 //		int x = 4, y = 7;
 //		
 //		System.out.println(x&y);
@@ -81,8 +82,9 @@ public class Mainentry {
 	
 	
 //	public static void main(String[] args) {
-//		//논리연산자: &&, ||, !     10진 논리 => 결과를 값으로 돌려준다.
-	
+//		//논리연산자: &&, ||, !     
+//		//10진 논리 => 결과를 값으로 돌려준다.
+//	
 //		int x = 10, y = 20, z = 30;
 //		boolean result = true;
 //		
@@ -93,7 +95,7 @@ public class Mainentry {
 	
 //	public static void main(String[] args) {
 //		//삼항연산자   (조건)? 참 : 거짓 ;
-	
+//	
 //		int x = 20, y = 10;
 //		int a = 10, b = 20, c = 30;
 //		String msg = null;
