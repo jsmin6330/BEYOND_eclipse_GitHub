@@ -1,7 +1,7 @@
 package quiz_special;
 import java.util.Scanner;
 
-public class Score {
+public class Score_v01 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);  //객체 생성, 메모리에 할당, 생성자함수 자동호출
 		
