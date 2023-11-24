@@ -71,6 +71,36 @@
 //}
 
 
+//package day04_quiz;
+//import java.util.Scanner;
+//
+//public class Quiz_1123 { // 4번
+//	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		System.out.print("숫자 3개를 입력하세요: ");
+//		int a = sc.nextInt();
+//		int b = sc.nextInt();
+//		int c = sc.nextInt();
+//		
+//		int temp = 0;
+//		int i = 0;
+//		while(i < 3) {
+//			if(a < b) {
+//				temp = a;
+//				a = b;
+//				b = temp;
+//			}	
+//			if(b < c) {
+//				temp = b;
+//				b = c;
+//				c = temp;
+//			}
+//			i++;
+//		}
+//		System.out.printf("%d %d %d", a, b, c);
+//	}
+//}
+
 package day04_quiz;
 import java.util.Scanner;
 
@@ -83,7 +113,7 @@ public class Quiz_1123 { // 4번
 		int c = sc.nextInt();
 		
 		int temp = 0;
-		int i = 0;
+		int i = 1;
 		while(i < 3) {
 			if(a < b) {
 				temp = a;
