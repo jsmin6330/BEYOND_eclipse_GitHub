@@ -97,6 +97,31 @@ private String name;
 		this.grade = grade;
 	}
 	
+	
+	//input
+	public void input() {
+		//생성자는 초기 1회만 실행되기 때문에
+		//값을 계속 받아야한다면 따로 함수를 만들어야한다.
+		
+		Scanner sc = new Scanner(System.in);
+		
+		do {
+			System.out.print("국어 점수를 입력하세요(0~100) = ");
+			this.kor = sc.nextInt();
+		} while ( this.kor < 0 || this.kor > 100 );
+		
+		do {
+			System.out.print("영어 점수를 입력하세요(0~100) = ");
+			this.eng = sc.nextInt();
+		} while ( this.eng < 0 || this.eng > 100 );
+		
+		do {
+			System.out.print("컴퓨터 점수를 입력하세요(0~100) = ");
+			this.com = sc.nextInt();
+		} while ( this.com < 0 || this.com > 100 );
+		
+	}
+	
 	//output
 	public void output() {
 		System.out.printf("%s님의 성적표 *****\n", name);

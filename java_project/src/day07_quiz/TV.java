@@ -13,8 +13,6 @@ public class TV {
 	//멤버변수의 초기화 담당
 	
 
-	
-
 	public TV() { //default constructor
 		color = "gray";
 		channel = 11;
