@@ -11,7 +11,6 @@ public class MainEntry {
 		System.out.println(pt);
 		System.out.println(pt.hashCode());
 		System.out.println(pt.toString());
-
 	}
 }
 
