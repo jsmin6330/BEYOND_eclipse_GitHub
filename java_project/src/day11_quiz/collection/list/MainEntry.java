@@ -57,7 +57,7 @@ public class MainEntry {
 		System.out.print("몇 번째 고객을 삭제하시겠습니까? ");
 		int num;
 		num = sc.nextInt();
-		list.remove(num+1);
+		list.remove(num-1);
 		
 	}
 	
@@ -74,6 +74,6 @@ public class MainEntry {
 		Customers c1 = new Customers();
 		c1.input();
 
-		list.set(num+1, c1); 
+		list.set(num-1, c1); 
 	}
 }	
