@@ -1,5 +1,7 @@
 package day12_quiz_video;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -9,6 +11,8 @@ import java.util.Set;
 public class VideoLend extends Video{
 	
 	static HashMap map = new HashMap();
+	protected static int num_code = 1; 
+	//번호가 자동으로 늘어나길 원해서 코드 추가
 	
 	public VideoLend() {
 		
@@ -22,15 +26,16 @@ public class VideoLend extends Video{
 	//추가
 	public void video_add() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("고유 번호: ");
-		int k_num = sc.nextInt();
+//		System.out.print("고유 번호: ");
+//		번호를 자동으로 발급 받고 싶어서 코드 수정
+//		int k_num = sc.nextInt();
 		System.out.print("비디오 이름: ");
 		title = sc.next();
 		System.out.print("비디오 카테고리: ");
 		category = sc.next();
 		
 		Video v = new Video(title, category);
-		map.put(k_num, v);
+		map.put(num_code++, v);
 	}
 	
 	//삭제
@@ -56,6 +61,7 @@ public class VideoLend extends Video{
 	
 	
 	//수정
+	//비디오가 없으면 수정이 안뜨도록 추가 필요
 	public void video_change() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("수정할 비디오 번호: ");
@@ -71,7 +77,10 @@ public class VideoLend extends Video{
 		
 	}
 	
-	public void video_lend() {
+	
+	//이미 대여한 비디오는 대여 못하도록 하는거 추가 필요.
+	//대여할 비디오가 없으면 진행 안되도록 하는 것 추가 필요
+	public void video_lend() { 
 		Scanner sc = new Scanner(System.in);
 		System.out.print("대여할 비디오 번호: ");
 		int n = sc.nextInt();
@@ -79,13 +88,25 @@ public class VideoLend extends Video{
 		Video v = (Video) map.get(n);
 		System.out.print("대여자: ");
 		String lendName = sc.next();
-		System.out.print("대여일자: ");
-		String lendDate = sc.next();
-		v.Video_lend(true, lendName, lendDate);
+//		System.out.print("대여일자: ");
+//		String lendDate = sc.next();
+		
+		//날짜를 랜덤으로 넣고 싶다.(영진님 코드 참조)
+		//현재 날짜 구하기
+		LocalDate now = LocalDate.now();
+		// 포맷 정의
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        // 포맷 적용
+        String formatedNow = now.format(formatter);
+		
+		
+		v.Video_lend(true, lendName, formatedNow);
 		map.replace(n, v);
 	}
 	
-	public void video_return() {
+	//대여하지 않은 비디오 반납 불가 필요
+	//대여한 비디오가 없거나, 비디오가 없으면 진행이 안되도록 추가 필요
+	public void video_return() { 
 		Scanner sc = new Scanner(System.in);
 		System.out.print("반납할 비디오 번호: ");
 		int n = sc.nextInt();
