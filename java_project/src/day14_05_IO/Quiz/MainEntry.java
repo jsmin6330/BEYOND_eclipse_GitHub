@@ -18,7 +18,7 @@ public class MainEntry {
 	}
 	
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		MemberManagement mm = new MemberManagement();
 		Scanner sc = new Scanner(System.in);
 		
@@ -46,13 +46,14 @@ public class MainEntry {
 				break;
 			case 5:
 				System.out.println("\n*-*-*-* 파일로 내보내기 *-*-*-*");
-				
+				mm.makeFile();
 				break;
 			case 6:
 				System.out.println("\n* 프로그램을 종료합니다.");
 				System.exit(0);
 			default:
-				System.out.println("번호를 잘못 입력하셨습니다!!");
+				System
+				.out.println("번호를 잘못 입력하셨습니다!!");
 			}
 		}
 	}

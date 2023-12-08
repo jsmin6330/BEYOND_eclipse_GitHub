@@ -6,6 +6,7 @@ public class RandomAcessFileEx {
 	public static void main(String[] args) throws Exception {
 		RandomAccessFile raf = new RandomAccessFile("sawon.txt", "rw");
 		// RandomAccessFile 쓰기 읽기 양방향 가능, 위치 지정은 seek 메소드가 한다.
+		// seek는 long 타입 인수가 들어간다.
 		
 //		for(int i = 0; i<10; i++) {
 //			raf.seek(i*100);

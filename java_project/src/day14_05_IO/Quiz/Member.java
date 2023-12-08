@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Member {
 	protected String name;
+	protected String genger;
 	protected int age;
 	protected int height;
 	protected int weight;
@@ -24,9 +25,12 @@ public class Member {
 	
 	public void input() {
 		Scanner sc = new Scanner(System.in);
-		
 		System.out.print("이름: ");
 		name = sc.next();
+		
+		System.out.print("성별(M/F): ");
+		
+		
 		System.out.print("나이: ");
 		age = sc.nextInt();
 		System.out.print("키: ");
@@ -60,7 +64,7 @@ public class Member {
 		}
 		else {
 			this.BMI = "저체중";
-		}
-				
+		}		
 	}
+	
 }
