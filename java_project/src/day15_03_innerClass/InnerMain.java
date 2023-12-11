@@ -24,7 +24,7 @@
 //		Button btn = new Button("push me");
 //		
 //		EventHandler handler = new InnerMain().new EventHandler();
-//		btn.addActionListener(handler);
+//		btn.addActionListener(handler); //버튼에 액션 이벤트 추가
 //		
 //		frame.add(btn); //프레임(윈도우)에 버튼 컴포넌트를 추가
 //		frame.setVisible(true);
