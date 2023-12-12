@@ -9,6 +9,8 @@ import java.net.URL;
 public class URLEx {
 	public static void main(String[] args) throws MalformedURLException, IOException {
 		URL encore = new URL("https://www.en-core.com");
+		
+		// System.in : 표준 입력 - 키보드부터
 		BufferedReader br = new BufferedReader(new InputStreamReader(encore.openStream()));
 		
 		String inputLine;

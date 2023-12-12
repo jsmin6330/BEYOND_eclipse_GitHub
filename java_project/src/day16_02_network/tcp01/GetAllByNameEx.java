@@ -12,11 +12,11 @@ public class GetAllByNameEx {
 		
 		System.out.println("site address = ");
 		try {
-//			strUrl = br.readLine(); //예외발생
-			strUrl = "LAPTOP-FMHI4RD5";
-			address = InetAddress.getAllByName(strUrl);
+			strUrl = br.readLine(); //예외발생
+//			strUrl = "LAPTOP-FMHI4RD5";
+			address = InetAddress.getAllByName(strUrl); //예외발생
 			
-			for(int i = 0; i<address.length; i++) {
+			for(int i = 0; i<address.length; i++) { //127.0.0.1
 				System.out.println(address[i]);
 			}
 		}catch(Exception e){

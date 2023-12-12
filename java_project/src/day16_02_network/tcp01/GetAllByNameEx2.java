@@ -9,11 +9,9 @@ public class GetAllByNameEx2 {
 		System.out.println("로컬 호스트 이름: " + address.getHostName());
 		System.out.println("로컬 호스트 IP주소: " + address.getHostAddress());
 		
-		
 		address = InetAddress.getByName("www.en-core.com");
 		System.out.println("로컬 호스트 이름: " + address.getHostName());
 		System.out.println("로컬 호스트 IP주소: " + address.getHostAddress());
-		
 		
 		byte[] addr = new byte[4];
 		addr[0] = (byte)192;
@@ -27,6 +25,7 @@ public class GetAllByNameEx2 {
 		System.out.println("로컬 호스트 IP주소: " + address.getHostAddress());
 		
 		InetAddress[] arr  = InetAddress.getAllByName("www.google.com");
+		
 		for(InetAddress item : arr) {
 			System.out.println("로컬 호스트 이름: " + item.getHostName());
 			System.out.println("로컬 호스트 IP주소: " + item.getCanonicalHostName());
